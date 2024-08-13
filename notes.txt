@@ -8,7 +8,7 @@ npm i jsonwebtoken
 
 npm i nodemon
 
-
+npm i concurrently   used for backend and frontend combine run
 
 mongodb atlas
 username = onlinecodemaster
