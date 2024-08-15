@@ -162,8 +162,8 @@ export default {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      primary:"#d3b015",
-      secondary:"#bb9c13"
+      primary:"#e52942",
+      secondary:"#fa4860"
     }),
     columns: {
       auto: 'auto',

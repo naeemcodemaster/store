@@ -1,8 +1,15 @@
 const express = require('express');
 const env = require('./config/envConfig');
 const connect = require('./config/db');
-const userRoutes = require('./routes/users/userRoutes');
-const bcrypt = require('bcrypt');
+const cors = require('cors')
+
+
+
+const userRoutes = require('./routes/userRoutes');
+const categoryRoutes = require('./routes/categoryRoutes')
+
+
+
 const app = express();
 
 
@@ -11,7 +18,9 @@ connect();
 // =========== End of DB Connection ============
 
 
-
+// ================ cors add to avoid cors error in frontend ============
+app.use(cors());
+// ================ end of cors =========================================
 
 // ============== Middleware for JSON Data get===========
 app.use(express.json())
@@ -24,9 +33,10 @@ app.get("/",(req,res)=>{
 })
 
 
-// =========== User Routes ============
+// =========== All Routes ============
 app.use('/api',userRoutes);
-// ========== End of User Router ==========
+app.use('/api',categoryRoutes);
+// ========== End of All Router ==========
 
 
 
