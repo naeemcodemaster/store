@@ -10,6 +10,9 @@
         @apply border p-2 rounded-sm outline-none w-full
     }
     .alert-danger{
-        @apply bg-red-100 text-red-700 p-3 mb-2 rounded-sm text-sm font-medium;
+        @apply bg-red-100 text-red-700 p-3 mb-2 rounded-sm text-sm font-medium border-l-4 border-red-900;
+    }
+    .alert-success{
+        @apply bg-green-100 text-green-700 p-3 mb-2 rounded-sm text-sm font-medium border-l-4 border-green-900;
     }
 }
